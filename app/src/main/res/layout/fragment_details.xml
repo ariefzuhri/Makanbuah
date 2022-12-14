@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".ui.fragment.DetailsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tb_details"
+        style="@style/Toolbar.Backable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:menu="@menu/menu_details" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/fab_cd_buy_details"
+        android:src="@drawable/ic_buy_24_details"
+        app:elevation="4dp"
+        app:fabSize="normal"
+        app:tint="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_details"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name"
+                style="@style/TextView.Header.1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/img_photo"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mango" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_advantage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_photo"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_advantage" />
+
+            <View
+                android:id="@+id/lyt_description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/lyt_bg_details"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_advantage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nutrition_title"
+                style="@style/TextView.Header.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:drawableStart="@drawable/ic_nutrition_24_details"
+                android:text="@string/tv_nutrition_title_details"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@+id/img_photo"
+                tools:viewBindingIgnore="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nutrition"
+                style="@style/TextView.Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="textEnd"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nutrition_title"
+                tools:text="Lorem ipsum dolor sit amet." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_benefit_title"
+                style="@style/TextView.Header.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:drawableStart="@drawable/ic_benefit_24_details"
+                android:text="@string/tv_benefit_title_details"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nutrition"
+                tools:viewBindingIgnore="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_benefit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_benefit_title"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_benefit" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_source_title"
+                style="@style/TextView.Header.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:drawableStart="@drawable/ic_sources_24_details"
+                android:text="@string/tv_source_title_details"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/rv_benefit"
+                tools:viewBindingIgnore="true" />
+
+            <TextView
+                android:id="@+id/tv_source"
+                style="@style/TextView.Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_source_title"
+                tools:text="Content by Verywell Fit\nPhoto by Fedor on Unsplash" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_read_more"
+                style="@style/TextView.Header.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/tv_read_more_details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_source" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_photo"
+                style="@style/CircleImageView"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_photo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/img_mango" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="180dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

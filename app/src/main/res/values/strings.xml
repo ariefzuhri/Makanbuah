@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">Makanbuah</string>
+
+    <string name="title_about">About</string>
+
+    <string name="attributions">Content by %1$s\nPhoto by %2$s on Unsplash</string>
+    <string name="share">Share</string>
+    <string name="share_text">Why you should eat %1$s, find out here %2$s</string>
+
+    <string name="menu_about_list">About</string>
+    <string name="tb_list_list">What fruit would you eat today?</string>
+    <string name="ib_cd_about_list">Go to about</string>
+
+    <string name="menu_share_details">Share</string>
+    <string name="tv_nutrition_title_details">Nutrition Facts</string>
+    <string name="tv_benefit_title_details">Health Benefits</string>
+    <string name="tv_source_title_details">Sources</string>
+    <string name="tv_read_more_details"><u>Read more...</u></string>
+    <string name="fab_cd_buy_details">Buy this fruit</string>
+
+    <string name="img_cd_profile_about">Arief Zuhri</string>
+    <string name="tv_name_about">Arief Zuhri</string>
+    <string name="tv_email_about">ariefzuhri72@gmail.com</string>
+    <string name="tv_attributions_about">credits to:</string>
+    <string name="img_cd_attributions_about">Credits to Verywell Fit and Unsplash</string>
+
+</resources>

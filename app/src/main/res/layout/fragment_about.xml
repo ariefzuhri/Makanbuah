@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.AboutFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tb_about"
+        style="@style/Toolbar.Backable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/title_about" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lyt_bg_rounded_left_right"
+            android:padding="32dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_profile"
+                style="@style/CircleImageView"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/img_cd_profile_about"
+                android:src="@drawable/img_profile_about"
+                tools:viewBindingIgnore="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name"
+                style="@style/TextView.Header.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/tv_name_about"
+                android:textAlignment="center"
+                tools:viewBindingIgnore="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_email"
+                style="@style/TextView.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="@string/tv_email_about"
+                tools:viewBindingIgnore="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_attributions_title"
+                style="@style/TextView.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="240dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/tv_attributions_about"
+                android:textAlignment="center"
+                tools:viewBindingIgnore="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_attributions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_attributions_title"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/img_cd_attributions_about"
+                android:src="@drawable/ic_attributions_309_32_about"
+                tools:viewBindingIgnore="true" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

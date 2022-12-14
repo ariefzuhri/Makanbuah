@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragment_list">
+
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="com.ariefzuhri.makanbuah.ui.fragment.ListFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_list_to_details"
+            app:destination="@id/fragment_details"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_list_to_about"
+            app:destination="@id/fragment_about"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_details"
+        android:name="com.ariefzuhri.makanbuah.ui.fragment.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="fruit"
+            app:argType="com.ariefzuhri.makanbuah.data.model.Fruit" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_about"
+        android:name="com.ariefzuhri.makanbuah.ui.fragment.AboutFragment"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>

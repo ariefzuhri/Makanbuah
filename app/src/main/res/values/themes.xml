@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Makanbuah" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/green</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/maven_pro</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.Makanbuah.Starting" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.Makanbuah</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenBackground">@color/green</item>
+    </style>
+
+    <style name="CircleImageView">
+        <item name="shapeAppearanceOverlay">@style/CircleImageViewShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="CircleImageViewShapeAppearanceOverlay">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RecyclerView">
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Header">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Header.1">
+        <item name="android:textSize">@dimen/textsize_large</item>
+    </style>
+
+    <style name="TextView.Header.2">
+        <item name="android:textSize">@dimen/textsize_medium</item>
+    </style>
+
+    <style name="TextView.Header.3">
+        <item name="android:textSize">@dimen/textsize_normal</item>
+    </style>
+
+    <style name="TextView.Normal">
+        <item name="android:textSize">@dimen/textsize_normal</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="titleTextAppearance">@style/ToolbarTittleTextAppearance</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar.Backable">
+        <item name="navigationIcon">@drawable/ic_back_24</item>
+        <item name="navigationIconTint">@color/white</item>
+    </style>
+
+    <style name="ToolbarTittleTextAppearance" parent="TextView.Header.2">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
